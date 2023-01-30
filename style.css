@@ -10,13 +10,29 @@
 }
 
 body {
+    position: relative;
     margin: 0;
     overflow-x: hidden;
+}
+.play-ground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.title {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); */
+    margin-bottom: 4rem !important;
 }
 
 .board {
     width: 100vw;
-    height: 100vh;
+    height: fit-content;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -119,17 +135,21 @@ body {
 
 .winning-message {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, .9);
     justify-content: center;
+    padding: 2rem 1rem;
+    border-radius: 15px;
     align-items: center;
     color: white;
     font-size: 5rem;
     flex-direction: column;
+}
+.winning-message div {
+    text-align: center;
 }
 
 .winning-message button{
